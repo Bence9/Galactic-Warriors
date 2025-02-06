@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galactic warrior</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Galactic Warrior</h1>
+    <canvas id="menu"></canvas>
+
+    <script type="module" src="index.js"></script>
+
+    <div id="description">
+
+        <h2>Controls:</h2>
+        <ul>
+            <li>Movement: Arrow keys</li>
+            <li>Shoot: Spacebar</li>
+            <li>Restart game: R</li>
+        </ul>
+
+
+        <h2>Rules:</h2>
+        <p>
+            Embark on an epic space adventure in Galactic Warrior, inspired by the classic Space Invaders.
+            Navigate your spaceship through enemy projectiles and dangerous meteors while striving to survive.
+            Your goal: score as many points as possible while skillfully avoiding obstacles and aiming with precision shots.
+            Immerse yourself in various difficulty levels, from easy to hard, each offering a unique gaming experience.
+            Customize your gameplay in the menus, wisely choose your battlefield and spacecraft.
+            Get ready for an adrenaline-filled journey in the Galactic Warrior universe!
+        </p>
+
+        <p>
+            During the game, the player has 3 lives. Using the left and right arrow keys,
+            you must dodge incoming projectiles aimed towards them. Additionally,
+            you must watch out for vicious meteor attacks (<img src="images/drop/meteorRed.png" alt="meteor" width="34" height="27" style="vertical-align: middle">).
+            Failing to avoid these hazards results in the player losing a life.
+            The game ends when the player loses all lives or eliminates all enemies.
+            Moreover, there are opportunities to collect falling bonus items, known as drops,
+            which can assist in various ways (<img src="images/drop/gift1.png" alt="gift1"  width="32" height="32" style="vertical-align: middle">).
+            With gift1, you gain +1 life (<img src="images/drop/gift2.png" alt="gift2"  width="32" height="32" style="vertical-align: middle">).
+            Acquiring gift2 grants +200 points.
+        </p>
+
+        <p>
+            <img src="images/ikon/score.png" alt="score"  width="32" height="32" style="vertical-align: middle"> How to earn score? <img src="images/ikon/score.png" alt="score"  width="32" height="32" style="vertical-align: middle">
+            <ul class="enemy-points">
+                <li>
+                    Shooting enemy:
+                    <div class="enemy-points-list">
+                        <ul class="points-column">
+                            <li>+ 10 points : <img src="images/enemy/enemy1.png" alt="enemy1" width="60" height="33"></li>
+                            <li>+ 20 points : <img src="images/enemy/enemy2.png" alt="enemy2" width="60" height="33"></li>
+                            <li>+ 30 points : <img src="images/enemy/enemy3.png" alt="enemy3" width="60" height="33"></li>
+                            <li>+ 40 points : <img src="images/enemy/enemy4.png" alt="enemy4" width="60" height="33"></li>
+                            <li>+ 50 points : <img src="images/enemy/enemy5.png" alt="enemy5" width="60" height="33"></li>
+                        </ul>
+                        <ul class="points-column">
+                            <li>+ 50 points : <img src="images/enemy/enemy6.png" alt="enemy6" width="35" height="30"></li>
+                            <li>+ 200 points : <img src="images/enemy/enemy6.png" alt="Miniboss" width="60" height="50"></li>
+                            <li>+ 1000 points : <img src="images/enemy/Boss1.png" alt="BOSS" width="60" height="60"></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    Picking up drops:
+                    <ul class="demo">
+                        <li>+ 200 points : <img src="images/drop/gift2.png" alt="gift2"  width="32" height="32" style="vertical-align: middle"> </li>
+                    </ul>
+                </li>
+                <li>
+                    Extra life bonuses:
+                    <ul class="demo">
+                        <li>+ Each life is worth an additional 50 points at the end of the game, so collect them (<img src="images/ikon/redHeart.png" alt="gift2"  width="32" height="32" style="vertical-align: middle">) </li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            The HIGHSCORE section tracks your progress throughout the five levels of Galactic Warrior. Each level presents unique challenges and enemies, testing your skills as you advance through the game. Don't worry about losing your score—your high scores points are automatically saved in your browser, ensuring that your progress carries over into future games. This means you can return anytime and continue striving for the highest score across all levels!
+        </p>
+
+        <p>
+            The DESCRIPTION section provides a historical overview of the Galactic Warrior game. It details the Space Invaders game, released in 1978, which became an iconic arcade game known for its addictive gameplay and pixelated graphics. The description explains how Space Invaders inspired the development of Galactic Warrior, showcasing its origins and the various levels and challenges within the game.
+        </p>
+
+        <p>
+            The SOUND section allows players to toggle the game sound on and off, as well as adjust the volume. Players can easily manage the sound settings to customize their gaming experience.
+        </p>
+
+        <p>
+            In the COSTUMIZATION section, players can customize their gaming experience. Here, they have the option to choose the colors of their player's and enemy's lasers, as well as the spaceship they want to play with. Additionally, they can select different battle fields to make the game even more thrilling. However, certain ships and fields are locked initially and can be unlocked by spending a certain amount of rubies, the in-game currency.
+        </p>
+        
+        <p>
+            Each spaceship and battlefield offers a unique experience, however they require rubies to unlock. Rubies can be earned through gameplay or obtained through other in-game activities.
+        </p>
+        
+        <div class="customization-section">
+            <div class="customization-column">
+                <p>Choosable ships:</p>
+                <ul>
+                    <li class="space">Azure Vortex (Free) <img src="images/player/player1.png" alt="player1" width="60" height="60" style="vertical-align: middle"></li>
+                    <li class="space">Emerald Wing - 50 Rubies <img src="images/player/player2.png" alt="player2" width="60" height="60" style="vertical-align: middle"></li>
+                    <li class="space">Titanium Dragon - 75 Rubies <img src="images/player/player3.png" alt="player3" width="60" height="60" style="vertical-align: middle"></li>
+                    <li class="space">Scarlet Phoenix - 100 Rubies <img src="images/player/player4.png" alt="player4" width="60" height="60" style="vertical-align: middle"></li>
+                </ul>
+            </div>
+            <div class="customization-column">
+                <p>Choosable fields:</p>
+                <ul>
+                    <li class="space">Space - (Free) <img src="images/background/space.png" alt="space" width="80" height="60" style="vertical-align: middle"></li>
+                    <li class="space">Desert - 50 Rubies <img src="images/background/desert.png" alt="desert" width="80" height="60" style="vertical-align: middle"></li>
+                    <li class="space">Cosmic - 100 Rubies <img src="images/background/cosmic.png" alt="cosmic" width="80" height="60" style="vertical-align: middle"></li>
+                    <li class="space">Earth - 150 Rubies <img src="images/background/earth.jpg" alt="universe" width="80" height="60" style="vertical-align: middle"></li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>How to Earn Rubies? <img src="images/ikon/rubyPic.png" alt="ruby" width="30" height="30"></h2>
+        <p>
+            Rubies are the in-game currency that you can use to unlock new spaceships and battlefields in the customization menu. Earning rubies is essential to enhance your gaming experience and explore all the unique options available.
+        </p>
+        <p>
+            Rubies are primarily earned by completing levels in the game. There are five levels in total, and each level rewards you with progressively more rubies as you advance. Each level has a specific difficulty ranking:
+        </p>
+        <ul>
+            <li><strong>Level 1 (Easy):</strong> Complete this level to earn 50 rubies.</li>
+            <li><strong>Level 2 (Normal):</strong> Earn 75 rubies by completing this level.</li>
+            <li><strong>Level 3 (Normal):</strong> Finish this level to receive 100 rubies.</li>
+            <li><strong>Level 4 (Hard):</strong> Conquer this level to gain 125 rubies.</li>
+            <li><strong>Level 5 (Brutal):</strong> Defeat the final boss in this level to earn 150 rubies.</li>
+        </ul>
+        <p>
+            As you advance through the levels, the difficulty increases, making the game more challenging and rewarding. The final level, Level 5, features a secret boss fight where your skills will be truly tested. Successfully defeating the boss will earn you the highest ruby reward of 150 rubies.
+        </p>
+        <p>
+            The difficulty progression is as follows: Easy, Normal, Hard, and Extreme. Keep playing, master the challenges, and accumulate rubies to unlock all the customization options available!
+        </p>
+        
+
+        <h2>Browser compatibility:</h2>
+        <ul>
+            <li>Chrome: 29.0.0</li>
+            <li>Firefox: 81.1.0</li>
+            <li>Opera: 16.0.1</li>
+            <li>Edge: 12.0.0</li>
+        </ul>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* styles.css */
+
+canvas {
+    box-shadow: #39FF14 10px 10px 15px;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 3.5em;
+    font-family: 'Orbitron', sans-serif;
+    font-style: italic;
+    color: #39ff14;
+    text-shadow: 5px 5px 10px #000000, /*árnyék*/
+                 0 0 20px #39ff14,
+                 0 0 20px #39ff14;
+    letter-spacing: 2px;
+    text-align: center;
+    animation: glow 3s ease-in-out infinite alternate; /* animáció */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 5px 5px 10px #000000, 0 0 0px #39ff14, 0 0 0px #39ff14;
+    }
+    100% {
+        text-shadow: 5px 5px 10px #000000, 0 0 20px #39ff14, 0 0 20px #39ff14;
+    }
+}
+
+
+body {
+    height: 510vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: #000000;
+    
+    /* A háttérkép és csillagok beállítása*/
+    background-image: url('images/background/SpaceBackground.png'),
+                      radial-gradient(circle, #444 1%, transparent 1%), 
+                      radial-gradient(circle, #333 2%, transparent 2%), 
+                      radial-gradient(circle, #222 3%, transparent 3%);
+    
+    /* A háttérkép ismétlése */
+    background-repeat: repeat;
+    background-size: 700px 600px, 5px 5px, 10px 10px, 15px 15px;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+    
+    /* A háttér fix marad a görgetésnél */
+    background-attachment: fixed;
+    
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    /* Animáció */
+    animation: moveStars 40s linear infinite;
+}
+
+/* Csillagok mozgatása az animációhoz */
+@keyframes moveStars {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: -700px -600px, 0 0, 0 0, 0 0;
+    }
+}
+
+
+#description {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: left;
+    width: 900px; 
+    color: yellow;
+    line-height: 1.6;
+}
+
+ul.demo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.customization-section {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.customization-column {
+    flex: 1; 
+    padding: 10px; 
+}
+
+li.space {
+    margin-bottom: 20px; 
+}
+
+.enemy-points-list {
+    display: flex;
+}
+
+.points-column {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.points-column li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.points-column img {
+    margin-left: 10px;
+}
